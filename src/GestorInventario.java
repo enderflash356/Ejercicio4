@@ -81,7 +81,7 @@ public class GestorInventario {
     System.out.println("Proyectores: " + proyDisp + " disponibles, " + proyAlq + " alquilados");
     System.out.println("Camaras: " + camDisp + " disponibles, " + camAlq + " alquilados");
     System.out.println("Sonidos: " + sonDisp + " disponibles, " + sonAlq + " alquilados");
-    System.out.println("Ingresos totales: " + ingresosTotales);
+    System.out.println("Ingresos totales: Q" + String.format("%.2f", ingresosTotales));
 }
 
     public double getIngresosTotales() {
