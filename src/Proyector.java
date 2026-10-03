@@ -1,19 +1,27 @@
 public class Proyector extends Equipo {
     private int lumenes;
-    private boolean wireless;
+    private boolean inalambrico;
 
-    public Proyector(int code, String brand, String model, double dailyCost, boolean available, int lumenes, boolean wireless) {
-        super(code, brand, model, dailyCost, available);
+    public Proyector(int codigo, String marca, String modelo, double tarifaDiaria, boolean disponible, int lumenes, boolean inalambrico) {
+        super(codigo, marca, modelo, tarifaDiaria, disponible);
         this.lumenes = lumenes;
-        this.wireless = wireless;
+        this.inalambrico = inalambrico;
     }
     @Override
-    protected double calculateExtraCost(int days) {
-        if (wireless){
-            return 50 * days;
+    protected double calcularRecargoExtra(int dias) {
+        if (inalambrico){
+            return 50.0 * dias;
         }
 
-        return 0;
+        return 0.0;
+    }
+
+    public int getLumenes() {
+        return lumenes;
+    }
+
+    public boolean isInalambrico() {
+        return inalambrico;
     }
     
 }
